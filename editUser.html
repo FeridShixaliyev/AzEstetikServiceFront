@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="/assets/images/logo-icon.png"  type="image/x-icon"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./admin/scss/admin.css">
+</head>
+
+<body>
+    <header>
+        <div class="row">
+            <div class="col-lg-12">
+                <a href="./users.html">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+                <div class="logo">
+                    <img src="./assets/images/white-logo.png" alt="">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <h3>SERVİS Admin Panel</h3>
+            </div>
+            <div class="circle-bottom"></div>
+        </div>
+    </header>
+    <main>
+        <section id="registerSec">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="loginTitle">İstifadəçi Redaktəsi</div>
+                </div>
+                <div class="col-lg-12">
+                    <form  method="post" enctype="multipart/form-data" id="update" onsubmit="updateForm(event)">
+                        <div class="mb-3">
+                          <label for="username" class="form-label">İstifadəçi adı</label>
+                          <input type="text" class="form-control" id="username" aria-describedby="username" placeholder="İstifadəçi adı">
+                        </div>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Ad Soyad Ata Adı</label>
+                            <input type="text" class="form-control" id="username" aria-describedby="username" placeholder="İstifadəçi adı">
+                          </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Şifrə</label>
+                          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Şifrə">
+                        </div>
+                        <div class="mb-3">
+                            <label for="rePassword" class="form-label">Təkrar Şifrə</label>
+                            <input type="password" class="form-control" id="rePassword" placeholder="Şifrə">
+                          </div>
+                        <div class="loginBtn">
+                            <button type="submit" class="btn btn-primary">Ok</button>
+                        </div>
+                      </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Specific js -->
+    <script>
+        function updateForm(e) {
+            e.preventDefault();
+
+            Swal.fire({
+                title: 'Dəyişiklikləri yadda saxlamaq istədiyinizə əminsiniz?',
+                icon: 'question',
+                showCancelButton: true,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire('Qeydə alındı!', '', 'success')
+                    const myForm = document.getElementById('update');
+                    setTimeout(function () {
+                        myForm.submit();
+                    }, 800);
+
+                } else if (result.isDenied) {
+                    Swal.fire('Changes are not saved', '', 'info')
+                }
+            })
+        }
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>

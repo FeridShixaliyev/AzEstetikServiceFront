@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="/assets/images/logo-icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./admin/scss/admin.css">
+</head>
+
+<body>
+    <header>
+        <div class="row">
+            <div class="col-lg-12">
+                <a href="./users.html">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+                <div class="logo">
+                    <img src="./assets/images/white-logo.png" alt="">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <h3>SERVİS Admin Panel</h3>
+            </div>
+            <div class="circle-bottom"></div>
+        </div>
+    </header>
+    <main>
+        <section id="registerSec">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="loginTitle">İstifadəçi Redaktəsi</div>
+                </div>
+                <div class="col-lg-12">
+                    <form method="post" enctype="multipart/form-data" id="update" onsubmit="updateForm(event)" style="padding-left: 30%;">
+                        <label asp-for="@Model.User.Id" class="form-label">Rolu</label>
+                        <select asp-for="@Model.Roles" id="pet-select">
+                            <option>Admin</option>
+                            <option>Moderator</option>
+                            <option>Specialist</option>
+                        </select>
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div style="display: flex; justify-content: space-between; margin-top: 15px;">
+                            <button type="submit"
+                                style="width: 120px; background: #44ce42; border-radius: 17px; border:none">Yadda
+                                Saxla</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    
+    <!-- Specific js -->
+
+    <script>
+        function updateForm(e) {
+            e.preventDefault();
+
+            Swal.fire({
+                title: 'Dəyişiklikləri yadda saxlamaq istədiyinizə əminsiniz?',
+                icon: 'question',
+                showCancelButton: true,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire('Qeydə alındı!', '', 'success')
+                    const myForm = document.getElementById('update');
+                    setTimeout(function () {
+                        myForm.submit();
+                    }, 800);
+
+                } else if (result.isDenied) {
+                    Swal.fire('Changes are not saved', '', 'info')
+                }
+            })
+        }
+
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="/assets/images/logo-icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <link rel="stylesheet" href="./assets/scss/style.css">
+</head>
+
+<body>
+    <main>
+        <section id="newReqForm">
+            <div class="row">
+                <div class="col-lg-12">
+                    <a href="./index.html">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                    <div class="title">
+                        <h1>
+                            YENİ MÜRACİƏT
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="newReqForm-form">
+            <form method="post" id="newReqForm">
+                <select class="form-select mb-3" aria-label="Default select example" style="font-size: 14px;">
+                    <option selected disabled hidden>Statusu</option>
+                    <option value="1">Yeni</option>
+                    <option value="2">Aktiv</option>
+                    <option value="3">Dəyandırılmış</option>
+                    <option value="4">Bitmiş</option>
+                    <option value="5">İmtina</option>
+                </select>
+                <label asp-for="@Model.Request.DeviceId" class="form-label">Cihaz</label>
+                <select class="js-example-basic-single form-select mb-3" aria-label="Default select example"
+                    style="font-size: 14px;" data-live-search="true" required>
+                    <option selected disabled hidden>Cihaz</option>
+                    <option value="1">A8</option>
+                    <option value="2">A3</option>
+                    <option value="3">A9</option>
+                    <option value="4">A20</option>
+                    <option value="5">A25</option>
+                    <option value="6">B40</option>
+                </select>
+                <label class="form-label">Gosterilen servis</label>
+                <select class="js-example-basic-single form-select mb-3" aria-label="Default select example"
+                    style="font-size: 14px;" data-live-search="true" required>
+                    <option selected disabled hidden>Gosterilen servis</option>
+                    <option value="1">Ekran dəyişimi</option>
+                    <option value="2">Ana kart</option>
+                    <option value="3">Cip</option>
+                    <option value="4">Korpus</option>
+                </select>
+                <div class="mb-3">
+                    <label for="nameSur" class="form-label">Ad, Soyad, Ata Adı</label>
+                    <input type="text" class="form-control" id="nameSur" placeholder="Ad, Soyad, Ata Adı" required>
+                </div>
+                <div class="mb-3">
+                    <label for="techError" class="form-label">Texniki nasazlıq</label>
+                    <input type="text" class="form-control" id="techError" placeholder="Texniki nasazlıq" required>
+                </div>
+                <div class="mb-3">
+                    <label for="phoneNumber" class="form-label">Telefon nömrəsi</label>
+                    <input type="tel" value="+994" required pattern="\+994[0-9]{7,13}" id="phone" maxlength="13"
+                        class="form-control" placeholder="+994 XX XXX XX XX">
+                </div>
+                <select class="form-select mb-3 mt-4" required aria-label="Default select example"
+                    style="font-size: 14px;">
+                    <option selected disabled hidden>Müraciət forması</option>
+                    <option value="1">Ödənişli</option>
+                    <option value="2">Ödenişsiz</option>
+                </select>
+                <div class="mb-3">
+                    <label for="reqTime" class="form-label">Müraciətin tarixi</label>
+                    <input type="date" class="form-control" disabled id="reqTime" placeholder="Müraciətin tarixi">
+                </div>
+                <div class="mb-3" style="display: flex;justify-content: center;margin-top: 40px;">
+                    <button type="submit" class="btn btn-success">Təstiqlə</button>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
+        integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"
+        integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function () {
+            $('.js-example-basic-single').select2();
+        });
+    </script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let phoneInput = document.getElementById('phone');
+            phoneInput.value = '+994';
+
+            phoneInput.addEventListener('input', function () {
+                let regex = /^(?:\+994|0)(?:12|50|51|55|70|77|99)[0-9]{7}$/;
+
+                if (regex.test(phoneInput.value)) {
+                    phoneInput.setCustomValidity('');
+                } else {
+                    phoneInput.setCustomValidity('Nömrənin formatı düzgün deyil!!');
+                }
+            });
+
+            phoneInput.addEventListener('keypress', function (event) {
+                let charCode = event.which ? event.which : event.keyCode;
+                if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
+    <script>
+        const dateInput = document.getElementById('reqTime');
+
+        dateInput.value = new Date().toISOString().split('T')[0];
+
+        console.log(new Date().toISOString().split('T')[0]);
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+
+</html>

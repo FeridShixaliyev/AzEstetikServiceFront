@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="/assets/images/logo-icon.png"  type="image/x-icon"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <!-- Specific css -->
+    <style>
+        #archive-items .row .col-lg-12 .preview-info .profile-img img {
+            border-radius: 18px;
+        }
+
+        #archive-items .row .col-lg-12 .preview-info .more a i {
+            color: #467082 !important;
+        }
+
+
+        @media only screen and (min-width: 380px) {
+            #filter-modal {
+                padding-top: 55% !important;
+            }
+        }
+
+        .active {
+            border: 1px solid #467082;
+        }
+    </style>
+    <link rel="stylesheet" href="./assets/scss/style.css">
+</head>
+<body>
+    <main>
+        <section id="serviceArchive">
+            <div class="row">
+                <div class="col-lg-12">
+                    <a href="./index.html">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                    <div class="title">
+                        <h1>
+                            SERVİS ARXİVİ
+                        </h1>
+                    </div>
+                    <button id="filterBtn">
+                        <i class="fa-solid fa-filter"></i>
+                    </button>
+
+                    <div id="filter-modal" style="padding-top: 80%;" class="filter">
+                        <div class="filter-content">
+                            <div class="modal-header">
+                                <div class="header-title">
+                                    <p>Filtr</p>
+                                </div>
+                                <span class="close">&times;</span>
+                            </div>
+                            <div class="modal-body">
+                                <div class="filter-item-2">
+                                    <div class="item-count" style="background-color:#0cc44a !important">
+                                        <i class="fa-solid fa-genderless" style="font-size: 28px;margin-top: 4px;"></i>
+                                    </div>
+                                    <div class="item-cat">
+                                        <a href="" class="cat-bt">
+                                            <p>Yeni</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="filter-item-2">
+                                    <div class="item-count" style="background-color:#078732">
+                                        <i class="fa-solid fa-genderless" style="font-size: 28px;margin-top: 4px;"></i>
+                                    </div>
+                                    <div class="item-cat">
+                                        <a href="" class="cat-bt">
+                                            <p>Aktiv</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="filter-item-2">
+                                    <div class="item-count" style="background-color:#aeacac">
+                                        <i class="fa-solid fa-genderless" style="font-size: 28px;margin-top: 4px;"></i>
+                                    </div>
+                                    <div class="item-cat">
+                                        <a href="" class="cat-bt">
+                                            <p>Dəyandırılmış</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="filter-item-2">
+                                    <div class="item-count" style="background-color:#FF5733">
+                                        <i class="fa-solid fa-genderless" style="font-size: 28px;margin-top: 4px;"></i>
+                                    </div>
+                                    <div class="item-cat">
+                                        <a href="" class="cat-bt">
+                                            <p>Bitmiş</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="filter-item-2">
+                                    <div class="item-count" style="background-color:red">
+                                        <i class="fa-solid fa-genderless" style="font-size: 28px;margin-top: 4px;"></i>
+                                    </div>
+                                    <div class="item-cat">
+                                        <a href="" class="cat-bt">
+                                            <p>İmtina</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="archive-items">
+            <div class="d-flex align-items-center justify-content-center flex-column gap-4">
+                <form class="d-flex">
+                    <input class="form-control me-1" type="search" placeholder="Axtar" aria-label="Search">
+                    <button class="btn btn-success" type="submit" style="background-color:#467082 ; border: none;">Axtar</button>
+                </form>
+            </div>
+            <div id="row-id" class="row">
+                <div class="col-lg-12">
+                    <div class="preview-info">
+                        <div class="profile-img">
+                            <img src="./assets/images/user-profile.jpg" alt="">
+                        </div>
+                        <div class="preview-content">
+                            <div class="status">
+                                <p>Status (Aktiv)</p>
+                            </div>
+                            <div class="preview-name">
+                                <p>Ad,Soyad,Ata adi</p>
+                            </div>
+                        </div>
+                        <div class="more">
+                            <button id="more-btn">
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="more-result" class="more-info">
+                        <div class="info-content">
+                            <p class="info-title">Müraciət müəllifi</p>
+                            <p class="info">Ferid Sixaliyev</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Usta Adı</p>
+                            <p class="info">Kamil Hesenli</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Ad, Soyad, Ata adı</p>
+                            <p class="info">Tural Kamilov</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Cihazın Adı</p>
+                            <p class="info">A8</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Texniki nasazlıq</p>
+                            <p class="info">Ana kart</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Telefon nömrəsi</p>
+                            <p class="info">34534534534534</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Ehtiyat hissəsinin qiyməti (azn ilə)ət</p>
+                            <p class="info">90</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Qiymət</p>
+                            <p class="info">200</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Dəyişən/Təmir olunan hissə</p>
+                            <p class="info">Ana kart</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Əlavə qeydlər</p>
+                            <p class="info">Ugurla tehvil verildi</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Təmirə başlama tarixi</p>
+                            <p class="info">02.02.2023</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Təmirin bitmə tarixi</p>
+                            <p class="info">10.02.2023</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="preview-info">
+                        <div class="profile-img">
+                            <img src="./assets/images/user-profile.jpg" alt="">
+                        </div>
+                        <div class="preview-content">
+                            <div class="status">
+                                <p>Status (Aktiv)</p>
+                            </div>
+                            <div class="preview-name">
+                                <p>Ad,Soyad,Ata adi</p>
+                            </div>
+                        </div>
+                        <div class="more">
+                            <button id="more-btn">
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="more-result" class="more-info">
+                        <div class="info-content">
+                            <p class="info-title">Müraciət müəllifi</p>
+                            <p class="info">Ferid Sixaliyev</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Usta Adı</p>
+                            <p class="info">Kamil Hesenli</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Ad, Soyad, Ata adı</p>
+                            <p class="info">Tural Kamilov</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Cihazın Adı</p>
+                            <p class="info">A8</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Texniki nasazlıq</p>
+                            <p class="info">Ana kart</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Telefon nömrəsi</p>
+                            <p class="info">34534534534534</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Ehtiyat hissəsinin qiyməti (azn ilə)ət</p>
+                            <p class="info">90</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Qiymət</p>
+                            <p class="info">200</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Dəyişən/Təmir olunan hissə</p>
+                            <p class="info">Ana kart</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Əlavə qeydlər</p>
+                            <p class="info">Ugurla tehvil verildi</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Təmirə başlama tarixi</p>
+                            <p class="info">02.02.2023</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Təmirin bitmə tarixi</p>
+                            <p class="info">10.02.2023</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="preview-info">
+                        <div class="profile-img">
+                            <img src="./assets/images/user-profile.jpg" alt="">
+                        </div>
+                        <div class="preview-content">
+                            <div class="status">
+                                <p>Status (Aktiv)</p>
+                            </div>
+                            <div class="preview-name">
+                                <p>Ad,Soyad,Ata adi</p>
+                            </div>
+                        </div>
+                        <div class="more">
+                            <button id="more-btn">
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="more-result" class="more-info">
+                        <div class="info-content">
+                            <p class="info-title">Müraciət müəllifi</p>
+                            <p class="info">Ferid Sixaliyev</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Usta Adı</p>
+                            <p class="info">Kamil Hesenli</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Ad, Soyad, Ata adı</p>
+                            <p class="info">Tural Kamilov</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Cihazın Adı</p>
+                            <p class="info">A8</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Texniki nasazlıq</p>
+                            <p class="info">Ana kart</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Telefon nömrəsi</p>
+                            <p class="info">34534534534534</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Ehtiyat hissəsinin qiyməti (azn ilə)ət</p>
+                            <p class="info">90</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Qiymət</p>
+                            <p class="info">200</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Dəyişən/Təmir olunan hissə</p>
+                            <p class="info">Ana kart</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Əlavə qeydlər</p>
+                            <p class="info">Ugurla tehvil verildi</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Təmirə başlama tarixi</p>
+                            <p class="info">02.02.2023</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Təmirin bitmə tarixi</p>
+                            <p class="info">10.02.2023</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="preview-info">
+                        <div class="profile-img">
+                            <img src="./assets/images/user-profile.jpg" alt="">
+                        </div>
+                        <div class="preview-content">
+                            <div class="status">
+                                <p>Status (Aktiv)</p>
+                            </div>
+                            <div class="preview-name">
+                                <p>Ad,Soyad,Ata adi</p>
+                            </div>
+                        </div>
+                        <div class="more">
+                            <button id="more-btn">
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="more-result" class="more-info">
+                        <div class="info-content">
+                            <p class="info-title">Müraciət müəllifi</p>
+                            <p class="info">Ferid Sixaliyev</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Usta Adı</p>
+                            <p class="info">Kamil Hesenli</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Ad, Soyad, Ata adı</p>
+                            <p class="info">Tural Kamilov</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Cihazın Adı</p>
+                            <p class="info">A8</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Texniki nasazlıq</p>
+                            <p class="info">Ana kart</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Telefon nömrəsi</p>
+                            <p class="info">34534534534534</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Ehtiyat hissəsinin qiyməti (azn ilə)ət</p>
+                            <p class="info">90</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Qiymət</p>
+                            <p class="info">200</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Dəyişən/Təmir olunan hissə</p>
+                            <p class="info">Ana kart</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Əlavə qeydlər</p>
+                            <p class="info">Ugurla tehvil verildi</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Təmirə başlama tarixi</p>
+                            <p class="info">02.02.2023</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Təmirin bitmə tarixi</p>
+                            <p class="info">10.02.2023</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="preview-info">
+                        <div class="profile-img">
+                            <img src="./assets/images/user-profile.jpg" alt="">
+                        </div>
+                        <div class="preview-content">
+                            <div class="status">
+                                <p>Status (Aktiv)</p>
+                            </div>
+                            <div class="preview-name">
+                                <p>Ad,Soyad,Ata adi</p>
+                            </div>
+                        </div>
+                        <div class="more">
+                            <button id="more-btn">
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="more-result" class="more-info">
+                        <div class="info-content">
+                            <p class="info-title">Müraciət müəllifi</p>
+                            <p class="info">Ferid Sixaliyev</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Usta Adı</p>
+                            <p class="info">Kamil Hesenli</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Ad, Soyad, Ata adı</p>
+                            <p class="info">Tural Kamilov</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Cihazın Adı</p>
+                            <p class="info">A8</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Texniki nasazlıq</p>
+                            <p class="info">Ana kart</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Telefon nömrəsi</p>
+                            <p class="info">34534534534534</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Ehtiyat hissəsinin qiyməti (azn ilə)ət</p>
+                            <p class="info">90</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Qiymət</p>
+                            <p class="info">200</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Dəyişən/Təmir olunan hissə</p>
+                            <p class="info">Ana kart</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Əlavə qeydlər</p>
+                            <p class="info">Ugurla tehvil verildi</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Təmirə başlama tarixi</p>
+                            <p class="info">02.02.2023</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Təmirin bitmə tarixi</p>
+                            <p class="info">10.02.2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Pagination -->
+        <nav aria-label="...">
+            <ul class="pagination" style="justify-content: center;">
+                <li class="page-item">
+                    <a class="page-link" tabindex="-1" aria-disabled="true"
+                        style="border: none;background-color: white;color: #467082; font-weight:700">
+                        &#60
+                    </a>
+                </li>
+
+                <li class="page-item "><a class="page-link"
+                        style="border: none;background-color: white;color: #467082; font-weight:700;z-index:0">1</a>
+                </li>
+                <li class="page-item "><a class="page-link"
+                        style="border: none;background-color: white;color: #467082; font-weight:700;z-index:0">2</a>
+                </li>
+                <li class="page-item "><a class="page-link"
+                        style="border: none;background-color: white;color: #467082; font-weight:700;z-index:0">3</a>
+                </li>
+                <li class="page-item "><a class="page-link"
+                        style="border: none;background-color: white;color: #467082; font-weight:700;z-index:0">4</a>
+                </li>
+
+                <li class="page-item">
+                    <a class="page-link" tabindex="-1" aria-disabled="true"
+                        style="border: none;background-color: white;color: #467082; font-weight:700">&#62
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <script>
+            // js for filter
+            let modal = document.getElementById("filter-modal");
+            let btn = document.getElementById("filterBtn");
+            let span = document.getElementsByClassName("close")[0];
+
+            btn.addEventListener("click",function(){
+                modal.style.display = "block";
+            })
+            span.addEventListener("click",function(){
+                modal.style.display = "none";
+            })
+            window.addEventListener("click",function(event){
+                if(event.target == modal){
+                    modal.style.display = "none";
+                }
+            })
+
+        </script>
+
+        <!-- js for more btn -->
+        <script>
+            let row = document.getElementById("row-id");
+            Array.from(row.children).forEach(element => {
+                let btnItem=element.children[0].children[2].children[0];
+                let moreComponent = element.children[1]
+
+                btnItem.addEventListener("click", _=>{
+                if(moreComponent.style.display=='none'){
+                    moreComponent.style.display="block";
+                }
+                else{
+                    moreComponent.style.display="none";
+                }
+            })
+            })
+
+        </script>
+    </main>
+
+</body>
+</html>

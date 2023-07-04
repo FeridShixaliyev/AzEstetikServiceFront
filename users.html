@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="/assets/images/logo-icon.png"  type="image/x-icon"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Specific css -->
+    <style>
+        #users-items .row .col-lg-12 .preview-info .profile-img img {
+            border-radius: 18px;
+        }
+
+        #users-items .row .col-lg-12 .preview-info .more a i {
+            color: #467082 !important;
+        }
+
+        .active {
+            border: 1px solid #467082;
+        }
+    </style>
+    <link rel="stylesheet" href="./admin/scss/admin.css">
+</head>
+
+<body>
+    <header>
+        <div class="row">
+            <div class="col-lg-12">
+                <a href="./admin.html">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+                <div class="logo">
+                    <img src="./assets/images/white-logo.png" alt="">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <h3>SERVİS Admin Panel</h3>
+            </div>
+            <div class="circle-bottom"></div>
+        </div>
+    </header>
+    <main>
+        <section id="users-title">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title">
+                        <h1>
+                            İSTİFADƏÇİLƏR
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="row" style="margin: 0;">
+            <div class="col-lg-12" style="padding-left: 10%;">
+                <a href="./register.html"
+                    style="display: flex;width: 90%;text-decoration: none; height: 100%;padding-left: 10px;padding-right: 10px;border: 2px solid #467082;border-radius: 10px;background-color: #467082;">
+                    <i class="fa-solid fa-plus"
+                        style="font-size: 25px; color: white;margin-right: 20px;padding-top: 4px;"></i>
+                    <p style="font-size: 20px;color: white;margin: 0;margin-bottom: 3px;">Yeni istifadəçi əlavə et</p>
+                </a>
+            </div>
+        </div>
+        <section id="users-items">
+            <div id="row-id" class="row">
+                <div class="col-lg-12">
+                    <div class="preview-info">
+                        <div class="profile-img">
+                            <img src="./assets/images/user-profile.jpg" alt="">
+                        </div>
+                        <div class="preview-content">
+                            <div class="status">
+                                <p>Username</p>
+                            </div>
+                            <div class="preview-name">
+                                <p>Ad,Soyad,Ata adi</p>
+                            </div>
+                        </div>
+                        <div class="more">
+                            <button id="more-btn">
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="more-result" class="more-info">
+                        <div class="info-content"
+                            style="display: flex;justify-content: space-around;border: 2px solid #0cc44a;">
+                            <a href="editUser.html"
+                                style="text-decoration: none;width: 56px;text-align: center;color: white; display: block;background-color: #0cc44a;border-radius: 9px;">Edit</a>
+                            <a href="role.html"
+                                style="text-decoration: none;width: 56px;text-align: center;color: white; display: block;background-color: #576bff;border-radius: 9px;">Role</a>
+                            <a 
+                                style="text-decoration: none;width: 56px;text-align: center;color: white; display: block;background-color:#FF5733 ;border-radius: 9px;">Block</a>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">İstifadəçi Adı</p>
+                            <p class="info">admin_123</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Ad, Soyad, Ata adı</p>
+                            <p class="info">Ferid Sixaliyev Samir</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Tarix</p>
+                            <p class="info">2023-06-26 05:09:00</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Bloklanıbmı?</p>
+                                <p class="info">Bəli/Xeyr</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="preview-info">
+                        <div class="profile-img">
+                            <img src="./assets/images/user-profile.jpg" alt="">
+                        </div>
+                        <div class="preview-content">
+                            <div class="status">
+                                <p>Username</p>
+                            </div>
+                            <div class="preview-name">
+                                <p>Ad,Soyad,Ata adi</p>
+                            </div>
+                        </div>
+                        <div class="more">
+                            <button id="more-btn">
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="more-result" class="more-info">
+                        <div class="info-content"
+                            style="display: flex;justify-content: space-around;border: 2px solid #0cc44a;">
+                            <a href="editUser.html"
+                                style="text-decoration: none;width: 56px;text-align: center;color: white; display: block;background-color: #0cc44a;border-radius: 9px;">Edit</a>
+                            <a href="role.html"
+                                style="text-decoration: none;width: 56px;text-align: center;color: white; display: block;background-color: #576bff;border-radius: 9px;">Role</a>
+                            <a 
+                                style="text-decoration: none;width: 56px;text-align: center;color: white; display: block;background-color:#FF5733 ;border-radius: 9px;">Block</a>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">İstifadəçi Adı</p>
+                            <p class="info">admin_123</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Ad, Soyad, Ata adı</p>
+                            <p class="info">Ferid Sixaliyev Samir</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Tarix</p>
+                            <p class="info">2023-06-26 05:09:00</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Bloklanıbmı?</p>
+                                <p class="info">Bəli/Xeyr</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="preview-info">
+                        <div class="profile-img">
+                            <img src="./assets/images/user-profile.jpg" alt="">
+                        </div>
+                        <div class="preview-content">
+                            <div class="status">
+                                <p>Username</p>
+                            </div>
+                            <div class="preview-name">
+                                <p>Ad,Soyad,Ata adi</p>
+                            </div>
+                        </div>
+                        <div class="more">
+                            <button id="more-btn">
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="more-result" class="more-info">
+                        <div class="info-content"
+                            style="display: flex;justify-content: space-around;border: 2px solid #0cc44a;">
+                            <a href="editUser.html"
+                                style="text-decoration: none;width: 56px;text-align: center;color: white; display: block;background-color: #0cc44a;border-radius: 9px;">Edit</a>
+                            <a href="role.html"
+                                style="text-decoration: none;width: 56px;text-align: center;color: white; display: block;background-color: #576bff;border-radius: 9px;">Role</a>
+                            <a 
+                                style="text-decoration: none;width: 56px;text-align: center;color: white; display: block;background-color:#FF5733 ;border-radius: 9px;">Block</a>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">İstifadəçi Adı</p>
+                            <p class="info">admin_123</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Ad, Soyad, Ata adı</p>
+                            <p class="info">Ferid Sixaliyev Samir</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Tarix</p>
+                            <p class="info">2023-06-26 05:09:00</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Bloklanıbmı?</p>
+                                <p class="info">Bəli/Xeyr</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="preview-info">
+                        <div class="profile-img">
+                            <img src="./assets/images/user-profile.jpg" alt="">
+                        </div>
+                        <div class="preview-content">
+                            <div class="status">
+                                <p>Username</p>
+                            </div>
+                            <div class="preview-name">
+                                <p>Ad,Soyad,Ata adi</p>
+                            </div>
+                        </div>
+                        <div class="more">
+                            <button id="more-btn">
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="more-result" class="more-info">
+                        <div class="info-content"
+                            style="display: flex;justify-content: space-around;border: 2px solid #0cc44a;">
+                            <a href="editUser.html"
+                                style="text-decoration: none;width: 56px;text-align: center;color: white; display: block;background-color: #0cc44a;border-radius: 9px;">Edit</a>
+                            <a href="role.html"
+                                style="text-decoration: none;width: 56px;text-align: center;color: white; display: block;background-color: #576bff;border-radius: 9px;">Role</a>
+                            <a 
+                                style="text-decoration: none;width: 56px;text-align: center;color: white; display: block;background-color:#FF5733 ;border-radius: 9px;">Block</a>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">İstifadəçi Adı</p>
+                            <p class="info">admin_123</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Ad, Soyad, Ata adı</p>
+                            <p class="info">Ferid Sixaliyev Samir</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Tarix</p>
+                            <p class="info">2023-06-26 05:09:00</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Bloklanıbmı?</p>
+                                <p class="info">Bəli/Xeyr</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="preview-info">
+                        <div class="profile-img">
+                            <img src="./assets/images/user-profile.jpg" alt="">
+                        </div>
+                        <div class="preview-content">
+                            <div class="status">
+                                <p>Username</p>
+                            </div>
+                            <div class="preview-name">
+                                <p>Ad,Soyad,Ata adi</p>
+                            </div>
+                        </div>
+                        <div class="more">
+                            <button id="more-btn">
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="more-result" class="more-info">
+                        <div class="info-content"
+                            style="display: flex;justify-content: space-around;border: 2px solid #0cc44a;">
+                            <a href="editUser.html"
+                                style="text-decoration: none;width: 56px;text-align: center;color: white; display: block;background-color: #0cc44a;border-radius: 9px;">Edit</a>
+                            <a href="role.html"
+                                style="text-decoration: none;width: 56px;text-align: center;color: white; display: block;background-color: #576bff;border-radius: 9px;">Role</a>
+                            <a 
+                                style="text-decoration: none;width: 56px;text-align: center;color: white; display: block;background-color:#FF5733 ;border-radius: 9px;">Block</a>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">İstifadəçi Adı</p>
+                            <p class="info">admin_123</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Ad, Soyad, Ata adı</p>
+                            <p class="info">Ferid Sixaliyev Samir</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Tarix</p>
+                            <p class="info">2023-06-26 05:09:00</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Bloklanıbmı?</p>
+                                <p class="info">Bəli/Xeyr</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="preview-info">
+                        <div class="profile-img">
+                            <img src="./assets/images/user-profile.jpg" alt="">
+                        </div>
+                        <div class="preview-content">
+                            <div class="status">
+                                <p>Username</p>
+                            </div>
+                            <div class="preview-name">
+                                <p>Ad,Soyad,Ata adi</p>
+                            </div>
+                        </div>
+                        <div class="more">
+                            <button id="more-btn">
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="more-result" class="more-info">
+                        <div class="info-content"
+                            style="display: flex;justify-content: space-around;border: 2px solid #0cc44a;">
+                            <a href="editUser.html"
+                                style="text-decoration: none;width: 56px;text-align: center;color: white; display: block;background-color: #0cc44a;border-radius: 9px;">Edit</a>
+                            <a href="role.html"
+                                style="text-decoration: none;width: 56px;text-align: center;color: white; display: block;background-color: #576bff;border-radius: 9px;">Role</a>
+                            <a 
+                                style="text-decoration: none;width: 56px;text-align: center;color: white; display: block;background-color:#FF5733 ;border-radius: 9px;">Block</a>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">İstifadəçi Adı</p>
+                            <p class="info">admin_123</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Ad, Soyad, Ata adı</p>
+                            <p class="info">Ferid Sixaliyev Samir</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Tarix</p>
+                            <p class="info">2023-06-26 05:09:00</p>
+                        </div>
+                        <div class="info-content">
+                            <p class="info-title">Bloklanıbmı?</p>
+                                <p class="info">Bəli/Xeyr</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pagination -->
+        <nav aria-label="...">
+            <ul class="pagination" style="justify-content: center;">
+                <li class="page-item">
+                    <a class="page-link" tabindex="-1" aria-disabled="true"
+                        style="border: none;background-color: white;color: #467082; font-weight:700">
+                        &#60
+                    </a>
+                </li>
+
+                <li class="page-item "><a class="page-link"
+                        style="border: none;background-color: white;color: #467082; font-weight:700;z-index:0">1</a>
+                </li>
+                <li class="page-item "><a class="page-link"
+                        style="border: none;background-color: white;color: #467082; font-weight:700;z-index:0">2</a>
+                </li>
+                <li class="page-item "><a class="page-link"
+                        style="border: none;background-color: white;color: #467082; font-weight:700;z-index:0">3</a>
+                </li>
+                <li class="page-item "><a class="page-link"
+                        style="border: none;background-color: white;color: #467082; font-weight:700;z-index:0">4</a>
+                </li>
+
+                <li class="page-item">
+                    <a class="page-link" tabindex="-1" aria-disabled="true"
+                        style="border: none;background-color: white;color: #467082; font-weight:700">&#62
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </main>
+
+    <!-- js for more btn -->
+    <script>
+        let row = document.getElementById("row-id");
+        Array.from(row.children).forEach(element => {
+            let btnItem = element.children[0].children[2].children[0];
+            let moreComponent = element.children[1]
+
+            btnItem.addEventListener("click", _ => {
+                if (moreComponent.style.display == 'none') {
+                    moreComponent.style.display = "block";
+                }
+                else {
+                    moreComponent.style.display = "none";
+                }
+            })
+        })
+
+    </script>
+</body>
+
+</html>

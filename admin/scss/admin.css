@@ -1,0 +1,286 @@
+header {
+  background-color: #467082;
+}
+header .row {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  --bs-gutter-x: 0;
+}
+header .row .col-lg-12 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 80px;
+}
+header .row .col-lg-12 a {
+  position: absolute;
+  left: 30px;
+  top: 20px;
+}
+header .row .col-lg-12 a i {
+  color: white;
+  font-size: 20px;
+}
+header .row .col-lg-12 .logo {
+  position: relative;
+  width: 65%;
+  display: flex;
+  justify-content: center;
+}
+header .row .col-lg-12 .logo img {
+  position: absolute;
+  width: 80%;
+  height: 53%;
+  bottom: 10px;
+}
+header .row .col-md-12 {
+  height: 106px;
+}
+header .row .col-md-12 h3 {
+  text-align: center;
+  color: white;
+}
+header .row .circle-bottom {
+  position: absolute;
+  bottom: -2px;
+  width: 100%;
+  height: 35px;
+  background-color: white;
+  border-top-left-radius: 64px;
+  border-top-right-radius: 64px;
+  box-shadow: 0 2px 19px 2px rgba(0, 0, 0, 0.5);
+  -webkit-clip-path: inset(-20px 0px 0px -10px);
+          clip-path: inset(-20px 0px 0px -10px);
+}
+
+main #admin-menu .row {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 20px;
+  margin: 0;
+}
+main #admin-menu .row .col-lg-12 {
+  width: 100%;
+  height: 70px;
+  border: 3px solid #467082;
+  border-radius: 20px;
+  padding: 9px;
+  margin-bottom: 15px;
+  box-shadow: rgba(100, 100, 111, 0.3) 0px 0px 19px 0px;
+}
+main #admin-menu .row .col-lg-12 .admin-menu-item {
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/images/item-bg.png");
+  background-color: #467082 !important;
+  border-radius: 11px;
+}
+main #admin-menu .row .col-lg-12 .admin-menu-item a {
+  position: relative;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 7px;
+}
+main #admin-menu .row .col-lg-12 .admin-menu-item a .fa-users {
+  color: white;
+  font-size: 24px;
+  margin-right: 20px;
+}
+main #admin-menu .row .col-lg-12 .admin-menu-item a h1 {
+  display: contents;
+  font-size: 24px;
+  color: white;
+}
+main #admin-menu .row .col-lg-12 .admin-menu-item a .fa-arrow-right {
+  color: white;
+  font-size: 24px;
+  position: absolute;
+  right: 19px;
+  top: 11px;
+}
+main #admin-menu .row .col-lg-12 .admin-menu-item a .fa-list-ul {
+  color: white;
+  font-size: 24px;
+  margin-right: 20px;
+}
+
+#users-title .row {
+  padding: 0;
+  margin: 0;
+  --bs-gutter-x: 0;
+}
+#users-title .row .col-lg-12 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 60px;
+}
+#users-title .row .col-lg-12 a {
+  position: absolute;
+  left: 30px;
+  top: 20px;
+}
+#users-title .row .col-lg-12 a i {
+  color: #467082;
+  font-size: 20px;
+}
+#users-title .row .col-lg-12 .title {
+  position: relative;
+  width: 65%;
+  display: flex;
+  justify-content: center;
+}
+#users-title .row .col-lg-12 .title h1 {
+  position: absolute;
+  bottom: 10px;
+  color: #467082;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+#users-items .row {
+  padding: 0;
+  margin: 0;
+  --bs-gutter-x: 0;
+  margin-left: 5%;
+  padding-top: 20px;
+}
+#users-items .row .col-lg-12 {
+  background: white;
+  height: 105px;
+  width: 95%;
+  border-radius: 18px;
+  margin-bottom: 15px;
+  box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+  padding: 2%;
+  display: table;
+}
+#users-items .row .col-lg-12 .preview-info {
+  display: flex;
+}
+#users-items .row .col-lg-12 .preview-info .profile-img {
+  height: 100%;
+  width: 25%;
+  border-radius: 18px;
+  background: #f3f3f3;
+}
+#users-items .row .col-lg-12 .preview-info .profile-img img {
+  width: 100%;
+  height: 100%;
+}
+#users-items .row .col-lg-12 .preview-info .preview-content {
+  height: 100%;
+  width: 60%;
+  padding: 10px;
+  padding-left: 20px;
+}
+#users-items .row .col-lg-12 .preview-info .preview-content .status {
+  background: #467082;
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+  height: 22px;
+  margin-bottom: 10px;
+  margin-top: 7px;
+}
+#users-items .row .col-lg-12 .preview-info .preview-content .status p {
+  color: white;
+  font-size: 13px;
+  margin: 0;
+}
+#users-items .row .col-lg-12 .preview-info .preview-content .preview-name {
+  background: #f3f3f3;
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+  height: 22px;
+}
+#users-items .row .col-lg-12 .preview-info .preview-content .preview-name p {
+  color: black;
+  font-size: 13px;
+  font-weight: 600;
+}
+#users-items .row .col-lg-12 .preview-info .more {
+  width: 15%;
+}
+#users-items .row .col-lg-12 .preview-info .more button {
+  border: none;
+  background: white;
+  width: 100%;
+  height: 80%;
+  margin-top: 20%;
+}
+#users-items .row .col-lg-12 .preview-info .more button i {
+  color: #467082;
+  font-size: 19px;
+}
+#users-items .row .col-lg-12 .more-info {
+  display: none;
+  width: 100%;
+  margin-top: 5px;
+}
+#users-items .row .col-lg-12 .more-info .info-content {
+  padding: 4px;
+  background: #f3f3f3;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+#users-items .row .col-lg-12 .more-info .info-content .info-title {
+  margin: 0;
+  font-size: 10px;
+}
+#users-items .row .col-lg-12 .more-info .info-content .info {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+#registerSec {
+  margin-top: 3px;
+  margin-bottom: 40px;
+}
+#registerSec .row {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0;
+}
+#registerSec .row .col-md-12 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+#registerSec .row .col-md-12 .loginTitle {
+  margin: 0;
+  width: 50%;
+  text-align: center;
+  color: #467082;
+  font-size: 24px;
+  border: 1px solid #467082;
+  border-radius: 30px;
+  background-color: #dedede;
+}
+#registerSec .row .col-lg-12 {
+  border: 2px solid #467082;
+  border-radius: 30px;
+  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#registerSec .row .col-lg-12 form .mb-3 input:focus {
+  border: 1px solid #467082;
+  border-color: inherit;
+  box-shadow: none;
+}
+#registerSec .row .col-lg-12 form .loginBtn {
+  display: flex;
+  justify-content: center;
+}
+#registerSec .row .col-lg-12 form .loginBtn button {
+  background-color: #467082;
+  border: none;
+  font-weight: 600;
+  width: 40%;
+}/*# sourceMappingURL=admin.css.map */
